@@ -21,7 +21,7 @@ class ItemsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users']
+            'contain' => ['Users', 'Tags']
         ];
         $items = $this->paginate($this->Items);
 

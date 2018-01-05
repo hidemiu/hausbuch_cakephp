@@ -24,6 +24,7 @@
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('buyed') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('tag') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -37,6 +38,9 @@
                 <td><?= h($item->title) ?></td>
                 <td><?= $this->Number->format($item->price) ?></td>
                 <td><?= h($item->buyed) ?></td>
+                <?php foreach($item->tags as $tag): ?>
+                    <td><?= h($tag->title) ?></td>
+                <?php endforeach; ?>
                 <td><?= h($item->created) ?></td>
                 <td><?= h($item->modified) ?></td>
                 <td class="actions">
