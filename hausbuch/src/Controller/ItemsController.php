@@ -13,6 +13,21 @@ use App\Controller\AppController;
 class ItemsController extends AppController
 {
 
+//    public function isAuthorized($user)
+//    {
+//        $action = $this->request->getParam('action');
+//        // add および tags アクションは、常にログインしているユーザーに許可されます。
+//        if (in_array($action, ['add', 'tags'])) {
+//            return true;
+//        }
+//
+//        // 記事が現在のユーザーに属していることを確認します。
+//        $items = $this->Items->findById($id)->first();
+//
+//        return $article->user_id === $user['id'];
+//    }
+
+
     /**
      * Index method
      *

@@ -43,6 +43,41 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [ // Authコンポーネントの読み込み
+            // 'authorize'=> 'Controller',
+            'authenticate' => [
+                'Form' => [ // 認証の種類を指定。Form,Basic,Digestが使える。デフォルトはForm
+                    'fields' => [ // ユーザー名とパスワードに使うカラムの指定。省略した場合はusernameとpasswordになる
+                        'username' => 'name', // ユーザー名のカラムを指定
+                        'password' => 'password' //パスワードに使うカラムを指定
+                    ]
+                ]
+            ],
+
+            'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+
+            // 未認証の場合、直前のページに戻します
+            'unauthorizedRedirect' => $this->referer(),
+
+            'loginRedirect' => [ // ログイン後に遷移するアクションを指定
+                'controller' => 'Items',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [ // ログアウト後に遷移するアクションを指定
+                'controller' => 'Users',
+                'action' => 'login',
+            ],
+
+//            'authError' => 'ログインできませんでした。ログインしてください。', // ログインに失敗したときのFlashメッセージを指定(省略可)
+
+        ]);
+
+        // display アクションを許可して、PagesController が引き続き
+        // 動作するようにします。また、読み取り専用のアクションを有効にします。
+        $this->Auth->allow(['display', 'view', 'index']);
 
         /*
          * Enable the following components for recommended CakePHP security settings.
@@ -51,4 +86,11 @@ class AppController extends Controller
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
     }
+
+    public function isAuthorized($user)
+    {
+        // デフォルトでは、アクセスを拒否します。
+        return false;
+    }
+
 }
