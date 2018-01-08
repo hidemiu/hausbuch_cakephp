@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/cakephp/tests" isTestSource="true" packagePrefix="Cake\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/hausbuch/tests" isTestSource="true" packagePrefix="App\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/hausbuch/src" isTestSource="false" packagePrefix="App\" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/ajgl/breakpoint-twig-extension" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/aptoma/twig-markdown" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/asm89/twig-cache-extension" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/aura/intl" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/bake" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/cakephp" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/cakephp-codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/chronos" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/debug_kit" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/plugin-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/jakub-onderka/php-console-color" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/jakub-onderka/php-console-highlighter" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/jasny/twig-extensions" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/josegonzalez/dotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/justinrainbow/json-schema" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/m1/env" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/mobiledetect/mobiledetectlib" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/robmorgan/phinx" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/seld/cli-prompt" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/seld/jsonlint" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/umpirsky/twig-php-function" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/wyrihaximus/twig-view" />
+      <excludeFolder url="file://$MODULE_DIR$/hausbuch/vendor/zendframework/zend-diactoros" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://$MODULE_DIR$/hausbuch/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
-        </CLASSES>
-        <SOURCES>
-          <root url="phar://$MODULE_DIR$/hausbuch/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>
