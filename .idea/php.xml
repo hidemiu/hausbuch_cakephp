@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/hausbuch/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/asm89/twig-cache-extension" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/aptoma/twig-markdown" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/umpirsky/twig-php-function" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/composer" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/m1/env" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/ajgl/breakpoint-twig-extension" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/seld/cli-prompt" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/cakephp/cakephp-codesniffer" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/cakephp/cakephp" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/cakephp/plugin-installer" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/cakephp/migrations" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/cakephp/bake" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/cakephp/chronos" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/robmorgan/phinx" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/cakephp/debug_kit" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/jasny/twig-extensions" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/aura/intl" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/josegonzalez/dotenv" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/hausbuch/vendor/wyrihaximus/twig-view" />
+    </include_path>
+  </component>
+</project>

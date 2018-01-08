@@ -13,8 +13,6 @@ use App\Controller\AppController;
 class ItemsController extends AppController
 {
 
-
-
     /**
      * Index method
      *
@@ -26,6 +24,7 @@ class ItemsController extends AppController
             'contain' => ['Users', 'Tags']
         ];
         $items = $this->paginate($this->Items);
+        $uname = $this->Auth->user('name');
 
         $this->set(compact('items'));
     }

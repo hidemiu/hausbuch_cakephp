@@ -44,7 +44,7 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [ // Authコンポーネントの読み込み
-            // 'authorize'=> 'Controller',
+            'authorize'=> 'Controller',
             'authenticate' => [
                 'Form' => [ // 認証の種類を指定。Form,Basic,Digestが使える。デフォルトはForm
                     'fields' => [ // ユーザー名とパスワードに使うカラムの指定。省略した場合はusernameとpasswordになる
