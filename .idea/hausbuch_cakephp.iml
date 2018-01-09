@@ -51,5 +51,109 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/ajgl/breakpoint-twig-extension" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/aptoma/twig-markdown" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/asm89/twig-cache-extension" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/aura/intl" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/bake" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/cakephp" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/cakephp-codesniffer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/chronos" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/debug_kit" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/migrations" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/plugin-installer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/composer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jasny/twig-extensions" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/josegonzalez/dotenv" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/justinrainbow/json-schema" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/m1/env" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/mobiledetect/mobiledetectlib" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/nikic/php-parser" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/psy/psysh" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/robmorgan/phinx" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/seld/cli-prompt" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/seld/jsonlint" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/seld/phar-utils" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/config" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/twig/twig" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/umpirsky/twig-php-function" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/wyrihaximus/twig-view" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/zendframework/zend-diactoros" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/ajgl/breakpoint-twig-extension" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/aptoma/twig-markdown" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/asm89/twig-cache-extension" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/aura/intl" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/bake" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/cakephp" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/cakephp-codesniffer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/chronos" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/debug_kit" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/migrations" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/cakephp/plugin-installer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/composer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jasny/twig-extensions" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/josegonzalez/dotenv" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/justinrainbow/json-schema" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/m1/env" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/mobiledetect/mobiledetectlib" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/nikic/php-parser" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/psy/psysh" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/robmorgan/phinx" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/seld/cli-prompt" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/seld/jsonlint" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/seld/phar-utils" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/config" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/twig/twig" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/umpirsky/twig-php-function" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/wyrihaximus/twig-view" />
+          <root url="file://$MODULE_DIR$/hausbuch/vendor/zendframework/zend-diactoros" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/hausbuch/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/hausbuch/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Item[]|\Cake\Collection\CollectionInterface $items
  */
+
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -12,7 +13,8 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
-        <li><?= h(uname) ?></li>
+        <li><?php echo $login_user['name']; ?></li>
+        <li><?php var_dump($login_user); ?></li>
     </ul>
 </nav>
 <div class="items index large-9 medium-8 columns content">
@@ -33,23 +35,25 @@
         </thead>
         <tbody>
             <?php foreach ($items as $item): ?>
-            <tr>
-                <td><?= $this->Number->format($item->id) ?></td>
-                <td><?= $item->has('user') ? $this->Html->link($item->user->name, ['controller' => 'Users', 'action' => 'view', $item->user->id]) : '' ?></td>
-                <td><?= h($item->title) ?></td>
-                <td><?= $this->Number->format($item->price) ?></td>
-                <td><?= h($item->buyed) ?></td>
-                <?php foreach($item->tags as $tag): ?>
-                    <td><?= h($tag->title) ?></td>
-                <?php endforeach; ?>
-                <td><?= h($item->created) ?></td>
-                <td><?= h($item->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $item->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $item->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $item->id], ['confirm' => __('Are you sure you want to delete # {0}?', $item->id)]) ?>
-                </td>
-            </tr>
+                <?php if ($item->user_id == $login_user['id']): ?>
+                    <tr>
+                        <td><?= $this->Number->format($item->id) ?></td>
+                        <td><?= $item->has('user') ? $this->Html->link($item->user->name, ['controller' => 'Users', 'action' => 'view', $item->user->id]) : '' ?></td>
+                        <td><?= h($item->title) ?></td>
+                        <td><?= $this->Number->format($item->price) ?></td>
+                        <td><?= h($item->buyed) ?></td>
+                        <?php foreach($item->tags as $tag): ?>
+                            <td><?= h($tag->title) ?></td>
+                        <?php endforeach; ?>
+                        <td><?= h($item->created) ?></td>
+                        <td><?= h($item->modified) ?></td>
+                        <td class="actions">
+                            <?= $this->Html->link(__('View'), ['action' => 'view', $item->id]) ?>
+                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $item->id]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $item->id], ['confirm' => __('Are you sure you want to delete # {0}?', $item->id)]) ?>
+                        </td>
+                    </tr>
+                <?php endif; ?>
             <?php endforeach; ?>
         </tbody>
     </table>
