@@ -24,9 +24,11 @@ class ItemsController extends AppController
             'contain' => ['Users', 'Tags']
         ];
         $items = $this->paginate($this->Items);
-        $uname = $this->Auth->user('name');
+        $login_user = $this->Auth->user();
+
 
         $this->set(compact('items'));
+        $this->set("login_user",$login_user);
     }
 
     /**
