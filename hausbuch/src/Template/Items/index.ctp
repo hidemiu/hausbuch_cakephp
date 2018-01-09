@@ -12,7 +12,7 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
-        <li><?= h($uname) ?></li>
+        <li><?= h(uname) ?></li>
     </ul>
 </nav>
 <div class="items index large-9 medium-8 columns content">
