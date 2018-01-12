@@ -44,7 +44,7 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [ // Authコンポーネントの読み込み
-            'authorize'=> 'Controller',
+ //           'authorize'=> 'Controller',
             'authenticate' => [
                 'Form' => [ // 認証の種類を指定。Form,Basic,Digestが使える。デフォルトはForm
                     'fields' => [ // ユーザー名とパスワードに使うカラムの指定。省略した場合はusernameとpasswordになる
@@ -59,9 +59,6 @@ class AppController extends Controller
                 'action' => 'login'
             ],
 
-            // 未認証の場合、直前のページに戻します
-            'unauthorizedRedirect' => $this->referer(),
-
             'loginRedirect' => [ // ログイン後に遷移するアクションを指定
                 'controller' => 'Items',
                 'action' => 'index'
@@ -70,6 +67,9 @@ class AppController extends Controller
                 'controller' => 'Users',
                 'action' => 'login',
             ],
+
+            // 未認証の場合、直前のページに戻します
+            'unauthorizedRedirect' => $this->referer()
 
 //            'authError' => 'ログインできませんでした。ログインしてください。', // ログインに失敗したときのFlashメッセージを指定(省略可)
 
