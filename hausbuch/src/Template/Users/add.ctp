@@ -19,13 +19,13 @@
 <div class="users form large-9 medium-8 columns content">
     <?= $this->Form->create($user) ?>
     <fieldset>
-        <legend><?= __('Add User') ?></legend>
+        <legend><?= __('Neuer Benutzer') ?></legend>
         <?php
             echo $this->Form->control('name', ['label' => 'Benutzername']);
             echo $this->Form->control('password', ['label' => 'Passwort']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Einreichen')) ?>
+    <?= $this->Form->button(__('Registrieren')) ?>
     <?= $this->Form->button('Zurück', ['onclick' => 'history.back()', 'type' => 'button']) ?>
     <?= $this->Form->end() ?>
 </div>

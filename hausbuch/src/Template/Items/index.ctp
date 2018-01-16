@@ -5,52 +5,53 @@
  */
 
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Item'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
-        <li><?php echo $login_user['name']; ?></li>
-        <li><?php var_dump($login_user); ?></li>
+<!--        <p><b>Benutzername: <?php echo $login_user['name']; ?></b></p> -->
+        <li class="heading"><?= __('Aktionen') ?></li>
+        <li><?= $this->Html->link(__('Neuer Artikel'), ['action' => 'add']) ?></li>
+<!--        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li> -->
+<!--        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li> -->
+        <li><?= $this->Html->link(__('Liste aller Kategorien'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Neue Kategorie'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
     </ul>
 </nav>
-<div class="items index large-9 medium-8 columns content">
-    <h3><?= __('Items') ?></h3>
+<div class="items index large-10 medium-8 columns content">
+    <div align="right"><b>Benutzername: <?php echo $login_user['name']; ?></b></div>
+    <h3><?= __('Artikel') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('price') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('buyed') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('tag') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+<!--                <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
+<!--                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th> -->
+                <th scope="col"><?= $this->Paginator->sort('titel') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('preis') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('kaufdatum') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('kategorie') ?></th>
+<!--                <th scope="col"><?= $this->Paginator->sort('created') ?></th> -->
+<!--                <th scope="col"><?= $this->Paginator->sort('modified') ?></th> -->
+                <th scope="col" class="actions"><?= __('Aktionen') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($items as $item): ?>
                 <?php if ($item->user_id == $login_user['id']): ?>
                     <tr>
-                        <td><?= $this->Number->format($item->id) ?></td>
-                        <td><?= $item->has('user') ? $this->Html->link($item->user->name, ['controller' => 'Users', 'action' => 'view', $item->user->id]) : '' ?></td>
+<!--                        <td><?= $this->Number->format($item->id) ?></td> -->
+<!--                        <td><?= $item->has('user') ? $this->Html->link($item->user->name, ['controller' => 'Users', 'action' => 'view', $item->user->id]) : '' ?></td> -->
                         <td><?= h($item->title) ?></td>
                         <td><?= $this->Number->format($item->price) ?></td>
                         <td><?= h($item->buyed) ?></td>
                         <?php foreach($item->tags as $tag): ?>
                             <td><?= h($tag->title) ?></td>
                         <?php endforeach; ?>
-                        <td><?= h($item->created) ?></td>
-                        <td><?= h($item->modified) ?></td>
+<!--                        <td><?= h($item->created) ?></td> -->
+<!--                        <td><?= h($item->modified) ?></td> -->
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $item->id]) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $item->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $item->id], ['confirm' => __('Are you sure you want to delete # {0}?', $item->id)]) ?>
+                            <?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $item->id]) ?>
+                            <?= $this->Html->link(__('Editieren'), ['action' => 'edit', $item->id]) ?>
+                            <?= $this->Form->postLink(__('Löschen'), ['action' => 'delete', $item->id], ['confirm' => __('Are you sure you want to delete # {0}?', $item->id)]) ?>
                         </td>
                     </tr>
                 <?php endif; ?>

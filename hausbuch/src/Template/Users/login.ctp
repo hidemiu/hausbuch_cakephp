@@ -1,4 +1,4 @@
-<h1>Login das Haushaltsbuch</h1>
+<h1>Login in das Haushaltsbuch</h1>
 <?= $this->Form->create() ?>
 <?= $this->Form->control('name', ['label' => 'Benutzername']) ?>
 <?= $this->Form->control('password', ['label' => 'Passwort']) ?>
