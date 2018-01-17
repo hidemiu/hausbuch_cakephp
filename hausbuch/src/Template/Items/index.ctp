@@ -18,7 +18,7 @@
     </ul>
 </nav>
 <div class="items index large-10 medium-8 columns content">
-    <div align="right"><b>Benutzername: <?php echo $login_user['name']; ?></b></div>
+    <div align="right"><b>Benutzername: <?= $this->Html->link($login_user['name'], ['controller' => 'Users', 'action' => 'view', $login_user['id']]) ?></b></div>
     <h3><?= __('Artikel') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

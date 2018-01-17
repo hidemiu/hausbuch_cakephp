@@ -4,28 +4,34 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+
+<nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Items'), ['controller' => 'Items', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Item'), ['controller' => 'Items', 'action' => 'add']) ?> </li>
+
+        <li class="heading"><?= __('Aktionen') ?></li>
+        <li><?= $this->Html->link(__('Liste aller Artikele'), ['controller' => 'Items', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Neuer Artikel'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Liste aller Kategorien'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Neue Kategorie'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
+    </ul>
     </ul>
 </nav>
-<div class="users view large-9 medium-8 columns content">
+
+<div class="users view large-10 medium-8 columns content">
     <h3><?= h($user->name) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($user->name) ?></td>
         </tr>
+        <!--
         <tr>
             <th scope="row"><?= __('Password') ?></th>
             <td><?= h($user->password) ?></td>
         </tr>
+        -->
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($user->id) ?></td>
@@ -39,6 +45,15 @@
             <td><?= h($user->modified) ?></td>
         </tr>
     </table>
+
+    <?= $this->Html->link(
+        'Editieren Benutzer',
+        ['controller' => 'users', 'action' => 'edit', $user->id]
+    ); ?>
+
+    <?= $this->Form->button('Zurück', ['onclick' => 'history.back()', 'type' => 'button']) ?>
+
+    <!--
     <div class="related">
         <h4><?= __('Related Items') ?></h4>
         <?php if (!empty($user->items)): ?>
@@ -74,4 +89,6 @@
         </table>
         <?php endif; ?>
     </div>
+    -->
+
 </div>
