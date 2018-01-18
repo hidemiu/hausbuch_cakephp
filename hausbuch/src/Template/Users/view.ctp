@@ -46,12 +46,17 @@
         </tr>
     </table>
 
+
     <?= $this->Html->link(
-        'Editieren Benutzer',
-        ['controller' => 'users', 'action' => 'edit', $user->id]
+            'Editieren Benutzer',
+            ['controller' => 'users', 'action' => 'edit', $user->id]
     ); ?>
 
-    <?= $this->Form->button('Zurück', ['onclick' => 'history.back()', 'type' => 'button']) ?>
+    <br>
+
+    <?= $this->Html->link('Zurück', "javascript:history.back()") ?>
+
+
 
     <!--
     <div class="related">
