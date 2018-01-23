@@ -7,8 +7,6 @@
 
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-
         <li class="heading"><?= __('Aktionen') ?></li>
         <li><?= $this->Html->link(__('Liste aller Artikele'), ['controller' => 'Items', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('Neuer Artikel'), ['action' => 'add']) ?></li>
@@ -28,7 +26,7 @@
         </tr>
         <!--
         <tr>
-            <th scope="row"><?= __('Password') ?></th>
+            <th scope="row"><?= __('Passwort') ?></th>
             <td><?= h($user->password) ?></td>
         </tr>
         -->
@@ -37,26 +35,20 @@
             <td><?= $this->Number->format($user->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Created') ?></th>
+            <th scope="row"><?= __('Erstellungsdatum') ?></th>
             <td><?= h($user->created) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Modified') ?></th>
+            <th scope="row"><?= __('Änderungsdatum') ?></th>
             <td><?= h($user->modified) ?></td>
         </tr>
     </table>
 
 
     <?= $this->Html->link(
-            'Editieren Benutzer',
+            'Editieren Benutzer/Passwort ändern',
             ['controller' => 'users', 'action' => 'edit', $user->id]
     ); ?>
-
-    <br>
-
-    <?= $this->Html->link('Zurück', "javascript:history.back()") ?>
-
-
 
     <!--
     <div class="related">

@@ -25,7 +25,7 @@
             echo $this->Form->control('password', ['label' => 'Passwort']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Registrieren')) ?>
     <?= $this->Form->button('Zurück', ['onclick' => 'history.back()', 'type' => 'button']) ?>
+    <?= $this->Form->button(__('Registrieren')) ?>
     <?= $this->Form->end() ?>
 </div>

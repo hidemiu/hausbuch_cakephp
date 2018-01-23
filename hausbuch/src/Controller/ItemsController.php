@@ -43,8 +43,10 @@ class ItemsController extends AppController
         $item = $this->Items->get($id, [
             'contain' => ['Users', 'Tags']
         ]);
+        $login_user = $this->Auth->user();
 
         $this->set('item', $item);
+        $this->set("login_user",$login_user);
     }
 
     /**
