@@ -104,7 +104,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('Der Benutzer wurde gespeichert.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'login']);
             }
             $this->Flash->error(__('Der Benutzer konnte nicht gespeichert werden. Bitte versuche es erneut.'));
         }
@@ -128,6 +128,6 @@ class UsersController extends AppController
             $this->Flash->error(__('Der Benutzer konnte nicht gelöscht werden. Bitte versuche es erneut.'));
         }
 
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['action' => 'login']);
     }
 }

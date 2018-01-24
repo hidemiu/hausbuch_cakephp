@@ -51,7 +51,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $item->id]) ?>
                             <?= $this->Html->link(__('Editieren'), ['action' => 'edit', $item->id]) ?>
-                            <?= $this->Form->postLink(__('Löschen'), ['action' => 'delete', $item->id], ['confirm' => __('Are you sure you want to delete # {0}?', $item->id)]) ?>
+                            <?= $this->Form->postLink(__('Löschen'), ['action' => 'delete', $item->id], ['confirm' => __('Sind Sie sicher, dass Sie löschen möchten "{0}"?', $item->title)]) ?>
                         </td>
                     </tr>
                 <?php endif; ?>

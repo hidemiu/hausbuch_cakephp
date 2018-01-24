@@ -60,11 +60,11 @@ class ItemsController extends AppController
         if ($this->request->is('post')) {
             $item = $this->Items->patchEntity($item, $this->request->getData());
             if ($this->Items->save($item)) {
-                $this->Flash->success(__('The item has been saved.'));
+                $this->Flash->success(__('Der Artikel wurde gespeichert.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The item could not be saved. Please, try again.'));
+            $this->Flash->error(__('Der Artikel konnte nicht gespeichert werden. Bitte versuche es erneut.'));
         }
         $users = $this->Items->Users->find('list', ['limit' => 200]);
         $tags = $this->Items->Tags->find('list', ['limit' => 200]);
@@ -86,11 +86,11 @@ class ItemsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $item = $this->Items->patchEntity($item, $this->request->getData());
             if ($this->Items->save($item)) {
-                $this->Flash->success(__('The item has been saved.'));
+                $this->Flash->success(__('Der Artikel wurde gespeichert.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The item could not be saved. Please, try again.'));
+            $this->Flash->error(__('Der Artikel konnte nicht gespeichert werden. Bitte versuche es erneut.'));
         }
         $users = $this->Items->Users->find('list', ['limit' => 200]);
         $tags = $this->Items->Tags->find('list', ['limit' => 200]);
@@ -109,9 +109,9 @@ class ItemsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $item = $this->Items->get($id);
         if ($this->Items->delete($item)) {
-            $this->Flash->success(__('The item has been deleted.'));
+            $this->Flash->success(__('Der Artikel wurde gelöscht.'));
         } else {
-            $this->Flash->error(__('The item could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Der Artikel konnte nicht gelöscht werden. Bitte versuche es erneut.'));
         }
 
         return $this->redirect(['action' => 'index']);

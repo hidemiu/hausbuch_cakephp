@@ -19,8 +19,8 @@
     <fieldset>
         <legend><?= __('Editieren Benutzer') ?></legend>
         <?php
-            echo $this->Form->control('Name');
-            echo $this->Form->control('Passwort');
+            echo $this->Form->control('name', ['label' => 'Name']);
+            echo $this->Form->control('password', ['label' => 'Passwort']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Registrieren')) ?>
