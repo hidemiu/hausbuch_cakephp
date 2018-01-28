@@ -57,6 +57,7 @@ class ItemsController extends AppController
     public function add()
     {
         $item = $this->Items->newEntity();
+        $login_user = $this->Auth->user();
         if ($this->request->is('post')) {
             $item = $this->Items->patchEntity($item, $this->request->getData());
             if ($this->Items->save($item)) {
