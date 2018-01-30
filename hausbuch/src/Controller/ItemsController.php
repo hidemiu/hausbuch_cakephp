@@ -60,6 +60,7 @@ class ItemsController extends AppController
         $login_user = $this->Auth->user();
         if ($this->request->is('post')) {
             $item = $this->Items->patchEntity($item, $this->request->getData());
+            $item->user_id = $login_user['id'];
             if ($this->Items->save($item)) {
                 $this->Flash->success(__('Der Artikel wurde gespeichert.'));
 

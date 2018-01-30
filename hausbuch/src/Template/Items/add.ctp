@@ -16,7 +16,7 @@
 <div class="items form large-10 medium-8 columns content">
     <?= $this->Form->create($item) ?>
     <fieldset>
-        <legend><?= __('Add Item') ?></legend>
+        <legend><?= __('Neuer Artikel') ?></legend>
         <?php
             //echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('title', ['label' => 'Titel']);

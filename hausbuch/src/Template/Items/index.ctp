@@ -15,6 +15,9 @@
         <li><?= $this->Html->link(__('Liste aller Kategorien'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Neue Kategorie'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
+        <!--
+        <li><?= var_dump($login_user) ?></li>
+        -->
     </ul>
 </nav>
 <div class="items index large-10 medium-8 columns content">
@@ -23,8 +26,10 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-<!--                <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
-<!--                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th> -->
+                <!--
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
+                -->
                 <th scope="col"><?= $this->Paginator->sort('titel') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('preis') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('kaufdatum') ?></th>
@@ -38,8 +43,10 @@
             <?php foreach ($items as $item): ?>
                 <?php if ($item->user_id == $login_user['id']): ?>
                     <tr>
-<!--                        <td><?= $this->Number->format($item->id) ?></td> -->
-<!--                        <td><?= $item->has('user') ? $this->Html->link($item->user->name, ['controller' => 'Users', 'action' => 'view', $item->user->id]) : '' ?></td> -->
+                        <!--
+                        <td><?= $this->Number->format($item->id) ?></td>
+                        <td><?= $item->has('user') ? $this->Html->link($item->user->name, ['controller' => 'Users', 'action' => 'view', $item->user->id]) : '' ?></td>
+                        -->
                         <td><?= h($item->title) ?></td>
                         <td><?= $this->Number->format($item->price) ?></td>
                         <td><?= h($item->buyed) ?></td>
