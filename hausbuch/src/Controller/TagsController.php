@@ -52,11 +52,11 @@ class TagsController extends AppController
         if ($this->request->is('post')) {
             $tag = $this->Tags->patchEntity($tag, $this->request->getData());
             if ($this->Tags->save($tag)) {
-                $this->Flash->success(__('The tag has been saved.'));
+                $this->Flash->success(__('Die Kategorie wurde gespeichert.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The tag could not be saved. Please, try again.'));
+            $this->Flash->error(__('Die Kategorie konnte nicht gespeichert werden. Bitte versuche es erneut.'));
         }
         $items = $this->Tags->Items->find('list', ['limit' => 200]);
         $this->set(compact('tag', 'items'));
@@ -77,11 +77,11 @@ class TagsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $tag = $this->Tags->patchEntity($tag, $this->request->getData());
             if ($this->Tags->save($tag)) {
-                $this->Flash->success(__('The tag has been saved.'));
+                $this->Flash->success(__('Die Kategorie wurde gespeichert.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The tag could not be saved. Please, try again.'));
+            $this->Flash->error(__('Die Kategorie konnte nicht gespeichert werden. Bitte versuche es erneut.'));
         }
         $items = $this->Tags->Items->find('list', ['limit' => 200]);
         $this->set(compact('tag', 'items'));
@@ -99,9 +99,9 @@ class TagsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $tag = $this->Tags->get($id);
         if ($this->Tags->delete($tag)) {
-            $this->Flash->success(__('The tag has been deleted.'));
+            $this->Flash->success(__('Die Kategorie wurde gelöscht.'));
         } else {
-            $this->Flash->error(__('The tag could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Die Kateorie konnte nicht gelöscht werden. Bitte versuche es erneut.'));
         }
 
         return $this->redirect(['action' => 'index']);
