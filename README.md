@@ -25,3 +25,6 @@ hausbuch tool by cakephp
 - sudo systemctl restart httpd
 
 ### http://192.168.33.111/hausbuch/
+
+# Set up for CentOS + Vagrant + Cakephp + MySQL
+https://qiita.com/hidelou/items/a1320bd35d878d9c228d
