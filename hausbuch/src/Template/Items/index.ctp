@@ -4,6 +4,8 @@
  * @var \App\Model\Entity\Item[]|\Cake\Collection\CollectionInterface $items
  */
 
+echo $this->Html->css('css_test');
+
 ?>
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -23,6 +25,9 @@
 <div class="items index large-10 medium-8 columns content">
     <div align="right"><b>Benutzername: <?= $this->Html->link($login_user['name'], ['controller' => 'Users', 'action' => 'view', $login_user['id']]) ?></b></div>
     <h3><?= __('Artikel') ?></h3>
+    <div class="test">
+        <p>test for css</p>
+    </div>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
