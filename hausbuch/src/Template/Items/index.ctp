@@ -26,7 +26,15 @@ echo $this->Html->css('css_test');
     <div align="right"><b>Benutzername: <?= $this->Html->link($login_user['name'], ['controller' => 'Users', 'action' => 'view', $login_user['id']]) ?></b></div>
     <h3><?= __('Artikel') ?></h3>
     <div class="test">
-        <p>test for css</p>
+        <?php
+            echo $this->Form->create("null", ['url' => ['action' => 'month_total']]);
+            echo $this -> Form -> date ( "birthday",  [ "label" => "Date of birth",
+                "dateFormat" => "DMY",
+                "minYear" => date ( "Y" ) - 70,
+                "maxYear" => date ( "Y" ) - 18 ]
+            );
+            echo $this->Form->end();
+        ?>
     </div>
     <table cellpadding="0" cellspacing="0">
         <thead>
