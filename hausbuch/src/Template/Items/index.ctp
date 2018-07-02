@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Item[]|\Cake\Collection\CollectionInterface $items
  */
 
-echo $this->Html->css('css_test');
+echo $this->Html->css('calc_monthly_total');
 
 ?>
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
@@ -25,14 +25,22 @@ echo $this->Html->css('css_test');
 <div class="items index large-10 medium-8 columns content">
     <div align="right"><b>Benutzername: <?= $this->Html->link($login_user['name'], ['controller' => 'Users', 'action' => 'view', $login_user['id']]) ?></b></div>
     <h3><?= __('Artikel') ?></h3>
-    <div class="test">
+    <div class="calc_total">
         <?php
             echo $this->Form->create("null", ['url' => ['action' => 'month_total']]);
-            echo $this -> Form -> date ( "birthday",  [ "label" => "Date of birth",
-                "dateFormat" => "DMY",
-                "minYear" => date ( "Y" ) - 70,
-                "maxYear" => date ( "Y" ) - 18 ]
-            );
+            echo $this -> Form -> control( "total_month",  [ "label" => "Monat gesamt",
+                "type" => "date",
+//              "minYear" => date ( "Y" ) - 20,
+                "maxYear" => date ( "Y" ) - 0,
+                "monthNames" => false,
+                "empty" => [ "year" => false, "month" => "MONAT"],
+                'year' => [
+                    'class' => 'cool-years',
+                    'title' => 'Registration Year'
+                ],
+                "day" => false
+            ]);
+            echo $this->Form->button('Berechnen');
             echo $this->Form->end();
         ?>
     </div>
