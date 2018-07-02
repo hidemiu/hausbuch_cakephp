@@ -121,6 +121,17 @@ class ItemsController extends AppController
 
     public function month_total()
     {
+        $this->paginate = [
+            'contain' => ['Users', 'Tags']
+        ];
+        $items = $this->paginate($this->Items);
+        $login_user = $this->Auth->user();
 
+        // GETでnameを取得したい場合
+        $this->request->query('total_month');
+
+
+        $this->set(compact('items'));
+        $this->set("login_user",$login_user);
     }
 }

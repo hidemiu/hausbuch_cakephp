@@ -27,7 +27,9 @@ echo $this->Html->css('calc_monthly_total');
     <h3><?= __('Artikel') ?></h3>
     <div class="calc_total">
         <?php
-            echo $this->Form->create("null", ['url' => ['action' => 'month_total']]);
+            echo $this->Form->create("null", ['url' => ['action' => 'month_total'],
+                'type' => 'get'
+            ]);
             echo $this -> Form -> control( "total_month",  [ "label" => "Monat gesamt",
                 "type" => "date",
 //              "minYear" => date ( "Y" ) - 20,
