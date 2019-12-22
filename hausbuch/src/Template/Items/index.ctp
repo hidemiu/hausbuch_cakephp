@@ -23,6 +23,23 @@
 <div class="items index large-10 medium-8 columns content">
     <div align="right"><b>Benutzername: <?= $this->Html->link($login_user['name'], ['controller' => 'Users', 'action' => 'view', $login_user['id']]) ?></b></div>
     <h3><?= __('Artikel') ?></h3>
+
+    <?php
+    echo $this->Form->date('registered', [
+        'minYear' => 2000,
+        'monthNames' => false,
+        'empty' => [
+            'year' => false,
+            'month' => 'Choose month...'
+        ],
+        'day' => false,
+        'year' => [
+            'class' => 'cool-years',
+            'title' => 'Registration Year'
+        ]
+    ]);
+    ?>
+
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
